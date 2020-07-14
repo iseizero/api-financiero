@@ -8,7 +8,7 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 
-// app.use("/v1", require('.routes'));
+app.use("/v1", require('./routes'));
 
 module.exports = {
     app
