@@ -1,12 +1,11 @@
 const {
     app
 } = require('./server');
-// const { logger } = require('./log');
+const { logger } = require('./log');
 
 async function run() {
     app.listen(4020, function(){
-        // logger.info("Server Start");
-        console.log("Server Start");
+        logger.info("Server Start");
     });
 }
 
