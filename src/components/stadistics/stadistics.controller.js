@@ -1,12 +1,13 @@
-exports.getAllEndpoints = (req, res) => {
-    return {
-        saludo: 'Hola Mundo'
-    }
-}
+const axios = require('axios');
+const BASE_URL = 'https://www.indecon.online/';
 
-
-catchError = _err => {
-    return res.status(500).send({
-        message: _err.message
+exports.getAllEndpoints = async (req, res) => {
+    axios.get(`${BASE_URL}last`).then((result) => {
+        console.log(result.data);
+        return res.send({result: result.data}).status(200);
+    }).catch((err) => {
+        return res.status(500).send({
+            message: err.message
+        });
     });
-};
+}
