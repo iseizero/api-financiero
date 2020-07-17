@@ -5,7 +5,7 @@ API Prueba de integración financiera
 ## Instalación
 
 1 .- Clonar proyecto
-2.- ingresar a al carpeta del proyecto y realizar 
+2.- ingresar a al carpeta del proyecto y ejecutar 
 ```bash
 npm install
 ```
