@@ -43,6 +43,7 @@ exports.getValuesByDateAndDate = (req,res) => {
     });
 }
 
+// Cambiamos valores y transformamos el arreglo para su lectura en el front
 transformValuesData = (values) => {
     var arrayDate = Object.entries(values).map((a) => {
         return {date: a[0], value: a[1]}
