@@ -16,7 +16,7 @@ describe("API connection", () => {
 describe("API interaction", () => {
 
     it('It should respond to the GET method', async () => {
-        const result = await axios.get("/numbers/init");
+        const result = await axios.get("http://localhost:4020/v1/api/numbers/all");
         expect(result.status).toBe(200);
         expect(result.data.length).toBeGreaterThan(0);
     }, 5000);
